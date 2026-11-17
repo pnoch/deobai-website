@@ -237,6 +237,26 @@
 c5c55ea0a1c8a82492995da0fbe44200067838f8fbd7268b060389b9a75084c2  deOBai_3.2.1_amd64.deb
 555366c32537368f6ba7362895cb443cc07072e64059c2ce27e5a5ac9f7a9230  deOBai-3.2.1-1.x86_64.rpm</pre>
         </details>
+        <details class="download-instructions">
+          <summary>Install and verify</summary>
+          <div class="download-instructions-body">
+            <p><strong>AppImage</strong></p>
+            <pre>chmod +x deOBai_3.2.1_amd64.AppImage
+./deOBai_3.2.1_amd64.AppImage</pre>
+            <p><strong>Debian / Ubuntu</strong></p>
+            <pre>sudo apt install ./deOBai_3.2.1_amd64.deb</pre>
+            <p><strong>Fedora / openSUSE</strong></p>
+            <pre>sudo dnf install ./deOBai-3.2.1-1.x86_64.rpm</pre>
+            <p><strong>Verify the download</strong></p>
+            <pre>curl -LO https://github.com/pnoch/deobai-releases/releases/download/v3.2.1/SHA256SUMS-3.2.1.txt
+sha256sum -c SHA256SUMS-3.2.1.txt</pre>
+            <p class="download-requirements">
+              Requires Linux x86-64 with WebKitGTK 4.1 and GTK 3; the deb and
+              rpm declare those dependencies. These builds are unsigned, so
+              verify the checksums before running.
+            </p>
+          </div>
+        </details>
         <p class="download-note">
           These builds are not code-signed. Verify the checksum before running.
         </p>
@@ -261,7 +281,13 @@ c5c55ea0a1c8a82492995da0fbe44200067838f8fbd7268b060389b9a75084c2  deOBai_3.2.1_a
     </main>
     <footer class="site-footer">
       <div class="wrap footer-content">
-        <span>© 2026 deObAI</span><span>A Siam Creations app</span>
+        <span>© 2026 deObAI</span>
+        <a
+          href="https://github.com/pnoch/deobai-releases/blob/main/LICENSE"
+          rel="noopener"
+          >MIT license</a
+        >
+        <span>A Siam Creations app</span>
       </div>
     </footer>
   </body>

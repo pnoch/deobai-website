@@ -467,3 +467,51 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
+
+.download-instructions {
+  max-width: 1020px;
+  margin: 0 auto 20px;
+  padding: 14px 18px;
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.download-instructions summary {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 650;
+}
+.download-instructions-body {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+.download-instructions-body p {
+  max-width: none;
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: left;
+}
+.download-instructions-body pre {
+  margin: 0;
+  padding: 10px 12px;
+  overflow-x: auto;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+.download-requirements {
+  font-size: 12px !important;
+}
+.footer-content a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.footer-content a:hover {
+  color: var(--text);
+}
