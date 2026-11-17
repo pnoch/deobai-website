@@ -194,7 +194,7 @@
             </p>
             <a
               class="button primary"
-              href="https://github.com/pnoch/deobai-releases/releases/download/v3.2.1/deOBai_3.2.1_amd64.AppImage"
+              href="https://github.com/pnoch/deobai-releases/releases/download/v3.2.2/deOBai_3.2.2_amd64.AppImage"
               rel="noopener"
               >Download AppImage</a
             >
@@ -209,7 +209,7 @@
             </p>
             <a
               class="button secondary"
-              href="https://github.com/pnoch/deobai-releases/releases/download/v3.2.1/deOBai_3.2.1_amd64.deb"
+              href="https://github.com/pnoch/deobai-releases/releases/download/v3.2.2/deOBai_3.2.2_amd64.deb"
               rel="noopener"
               >Download .deb</a
             >
@@ -224,7 +224,7 @@
             </p>
             <a
               class="button secondary"
-              href="https://github.com/pnoch/deobai-releases/releases/download/v3.2.1/deOBai-3.2.1-1.x86_64.rpm"
+              href="https://github.com/pnoch/deobai-releases/releases/download/v3.2.2/deOBai-3.2.2-1.x86_64.rpm"
               rel="noopener"
               >Download .rpm</a
             >
@@ -233,23 +233,30 @@
         </div>
         <details class="download-checksums">
           <summary>SHA-256 checksums</summary>
-          <pre>9179f9dd8226a20e7fde39640033002239f1958b04acd2f426f90960786836dd  deOBai_3.2.1_amd64.AppImage
-c5c55ea0a1c8a82492995da0fbe44200067838f8fbd7268b060389b9a75084c2  deOBai_3.2.1_amd64.deb
-555366c32537368f6ba7362895cb443cc07072e64059c2ce27e5a5ac9f7a9230  deOBai-3.2.1-1.x86_64.rpm</pre>
+          <pre>f3f5faebe9ec6c0327b4125365266b08f88d12ca312352fb25bacae00db6ea90  deOBai_3.2.2_amd64.AppImage
+b5ed04d72d146b7a951ee3d4d2db07ed62fbbe7a3524b2c949e8a98e13942dc7  deOBai_3.2.2_amd64.deb
+2f154423c805592722218a76332fc8c3d51aabf1f56f47b168d87e338c47e3fe  deOBai-3.2.2-1.x86_64.rpm</pre>
         </details>
         <details class="download-instructions">
           <summary>Install and verify</summary>
           <div class="download-instructions-body">
             <p><strong>AppImage</strong></p>
-            <pre>chmod +x deOBai_3.2.1_amd64.AppImage
-./deOBai_3.2.1_amd64.AppImage</pre>
+            <pre>chmod +x deOBai_3.2.2_amd64.AppImage
+./deOBai_3.2.2_amd64.AppImage</pre>
             <p><strong>Debian / Ubuntu</strong></p>
-            <pre>sudo apt install ./deOBai_3.2.1_amd64.deb</pre>
+            <pre>sudo apt install ./deOBai_3.2.2_amd64.deb</pre>
             <p><strong>Fedora / openSUSE</strong></p>
-            <pre>sudo dnf install ./deOBai-3.2.1-1.x86_64.rpm</pre>
+            <pre>sudo dnf install ./deOBai-3.2.2-1.x86_64.rpm</pre>
             <p><strong>Verify the download</strong></p>
-            <pre>curl -LO https://github.com/pnoch/deobai-releases/releases/download/v3.2.1/SHA256SUMS-3.2.1.txt
-sha256sum -c SHA256SUMS-3.2.1.txt</pre>
+            <pre>curl -LO https://github.com/pnoch/deobai-releases/releases/download/v3.2.2/SHA256SUMS
+curl -LO https://github.com/pnoch/deobai-releases/releases/download/v3.2.2/SHA256SUMS.sigstore.json
+sha256sum -c SHA256SUMS
+
+cosign verify-blob \
+  --bundle SHA256SUMS.sigstore.json \
+  --certificate-identity-regexp 'https://github.com/pnoch/deObAI/.github/workflows/linux-release.yml@refs/tags/v3.2.2' \
+  --certificate-oidc-issuer https://token.actions.githubusercontent.com \
+  SHA256SUMS</pre>
             <p class="download-requirements">
               Requires Linux x86-64 with WebKitGTK 4.1 and GTK 3; the deb and
               rpm declare those dependencies. These builds are unsigned, so
@@ -258,13 +265,13 @@ sha256sum -c SHA256SUMS-3.2.1.txt</pre>
           </div>
         </details>
         <p class="download-note">
-          These builds are not code-signed. Verify the checksum before running.
-          Future workflow-built releases also include a Sigstore signature.
+          These builds are not OS-code-signed. This release includes a Sigstore
+          signature over the checksums; verify both before running.
         </p>
         <p class="download-links">
           <a
             class="text-link"
-            href="https://github.com/pnoch/deobai-releases/releases/tag/v3.2.1"
+            href="https://github.com/pnoch/deobai-releases/releases/tag/v3.2.2"
             rel="noopener"
             >Release notes</a
           >
