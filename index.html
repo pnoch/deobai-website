@@ -254,7 +254,7 @@ sha256sum -c SHA256SUMS
 
 cosign verify-blob \
   --bundle SHA256SUMS.sigstore.json \
-  --certificate-identity-regexp 'https://github.com/pnoch/deObAI/.github/workflows/linux-release.yml@refs/tags/v3.2.19' \
+  --certificate-identity 'https://github.com/pnoch/deObAI/.github/workflows/linux-release.yml@refs/tags/v3.2.19' \
   --certificate-oidc-issuer https://token.actions.githubusercontent.com \
   SHA256SUMS</pre>
             <p class="download-requirements">
@@ -262,14 +262,15 @@ cosign verify-blob \
               rpm declare those dependencies. Third-party license notices and
               full license texts are included as
               <code>THIRD_PARTY_NOTICES.md</code> and
-              <code>THIRD_PARTY_LICENSES.md</code>. These builds are unsigned,
-              so verify the checksums before running.
+              <code>THIRD_PARTY_LICENSES.md</code>.
             </p>
           </div>
         </details>
         <p class="download-note">
-          These builds are not OS-code-signed. This release includes a Sigstore
-          signature over the checksums; verify both before running.
+          The binaries are not OS-code-signed. Each release carries a Sigstore
+          signature over <code>SHA256SUMS</code>; verify it and the checksums
+          before running. AppImage installs on 3.2.15 or newer can update from
+          <strong>Settings &rarr; About</strong>.
         </p>
         <p class="download-links">
           <a
