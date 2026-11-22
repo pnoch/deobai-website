@@ -250,7 +250,7 @@ c09a021f80f4af02f7d5e403ec3bdb2097e3f5e5e85efc28c534c734536672b5  deObAI-3.2.19-
             <p><strong>Verify the download</strong></p>
             <pre>curl -LO https://github.com/pnoch/deobai-releases/releases/download/v3.2.19/SHA256SUMS
 curl -LO https://github.com/pnoch/deobai-releases/releases/download/v3.2.19/SHA256SUMS.sigstore.json
-sha256sum -c SHA256SUMS
+sha256sum -c --ignore-missing SHA256SUMS
 
 cosign verify-blob \
   --bundle SHA256SUMS.sigstore.json \
