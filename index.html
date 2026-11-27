@@ -194,7 +194,7 @@
             </p>
             <a
               class="button primary"
-              href="https://github.com/pnoch/deobai-releases/releases/download/v3.2.37/deObAI_3.2.37_amd64.AppImage"
+              href="https://github.com/pnoch/deobai-releases/releases/download/v3.2.38/deObAI_3.2.38_amd64.AppImage"
               rel="noopener"
               >Download AppImage</a
             >
@@ -209,7 +209,7 @@
             </p>
             <a
               class="button secondary"
-              href="https://github.com/pnoch/deobai-releases/releases/download/v3.2.37/deObAI_3.2.37_amd64.deb"
+              href="https://github.com/pnoch/deobai-releases/releases/download/v3.2.38/deObAI_3.2.38_amd64.deb"
               rel="noopener"
               >Download .deb</a
             >
@@ -224,7 +224,7 @@
             </p>
             <a
               class="button secondary"
-              href="https://github.com/pnoch/deobai-releases/releases/download/v3.2.37/deObAI-3.2.37-1.x86_64.rpm"
+              href="https://github.com/pnoch/deobai-releases/releases/download/v3.2.38/deObAI-3.2.38-1.x86_64.rpm"
               rel="noopener"
               >Download .rpm</a
             >
@@ -233,28 +233,28 @@
         </div>
         <details class="download-checksums">
           <summary>SHA-256 checksums</summary>
-          <pre>5fe3e1203be091198919d831bc35dccbce0438beb086b08384545e767f37c391  deObAI_3.2.37_amd64.AppImage
-98d7b5ea104f1fb2838a9a8835487e3c2c9235583f2065c537966affa371c345  deObAI_3.2.37_amd64.deb
-6b11496d4788fe6059f8bde4ecc5b3128f36aeb23618985b32cf5aad9c59e112  deObAI-3.2.37-1.x86_64.rpm</pre>
+          <pre>f40689eb839c86f25f07df2ce79753067acfe674e405ce659dad1fb22a36e046  deObAI_3.2.38_amd64.AppImage
+3c0286b1cf203236d832f38990aa7a17624960cf49a91de5058c9cc066737596  deObAI_3.2.38_amd64.deb
+35d14d985d61fbd7865306cb67487de62549fed3c66624af3df4a2db6cb6cffa  deObAI-3.2.38-1.x86_64.rpm</pre>
         </details>
         <details class="download-instructions">
           <summary>Install and verify</summary>
           <div class="download-instructions-body">
             <p><strong>AppImage</strong></p>
-            <pre>chmod +x deObAI_3.2.37_amd64.AppImage
-./deObAI_3.2.37_amd64.AppImage</pre>
+            <pre>chmod +x deObAI_3.2.38_amd64.AppImage
+./deObAI_3.2.38_amd64.AppImage</pre>
             <p><strong>Debian / Ubuntu</strong></p>
-            <pre>sudo apt install ./deObAI_3.2.37_amd64.deb</pre>
+            <pre>sudo apt install ./deObAI_3.2.38_amd64.deb</pre>
             <p><strong>Fedora / openSUSE</strong></p>
-            <pre>sudo dnf install ./deObAI-3.2.37-1.x86_64.rpm</pre>
+            <pre>sudo dnf install ./deObAI-3.2.38-1.x86_64.rpm</pre>
             <p><strong>Verify the download</strong></p>
-            <pre>curl -LO https://github.com/pnoch/deobai-releases/releases/download/v3.2.37/SHA256SUMS
-curl -LO https://github.com/pnoch/deobai-releases/releases/download/v3.2.37/SHA256SUMS.sigstore.json
+            <pre>curl -LO https://github.com/pnoch/deobai-releases/releases/download/v3.2.38/SHA256SUMS
+curl -LO https://github.com/pnoch/deobai-releases/releases/download/v3.2.38/SHA256SUMS.sigstore.json
 sha256sum -c --ignore-missing SHA256SUMS
 
 cosign verify-blob \
   --bundle SHA256SUMS.sigstore.json \
-  --certificate-identity 'https://github.com/pnoch/deObAI/.github/workflows/linux-release.yml@refs/tags/v3.2.37' \
+  --certificate-identity 'https://github.com/pnoch/deObAI/.github/workflows/linux-release.yml@refs/tags/v3.2.38' \
   --certificate-oidc-issuer https://token.actions.githubusercontent.com \
   SHA256SUMS</pre>
             <p class="download-requirements">
@@ -275,7 +275,7 @@ cosign verify-blob \
         <p class="download-links">
           <a
             class="text-link"
-            href="https://github.com/pnoch/deobai-releases/releases/tag/v3.2.37"
+            href="https://github.com/pnoch/deobai-releases/releases/tag/v3.2.38"
             rel="noopener"
             >Release notes</a
           >
